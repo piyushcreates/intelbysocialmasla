@@ -1,5 +1,6 @@
 | Version | Date | Changes |
 |---------|------|---------|
+| 2.0.0   | 2026-04-06 | **Gold Release (v2.0.0)** — Final production polish. Purged all redundant artifacts (`compile_error.txt`, `build_log*.txt`). Master documentation overhaul for Play Store launch. |
 | 1.9.9   | 2026-04-06 | **Unified Splash Fix (v1.9.9)** — Removed the "double icon" issue by hiding the small system-generated splash icon. The app now transitions cleanly from a white screen to the authoritative **256dp** Compose Splash Screen. |
 | 1.9.8   | 2026-04-06 | **Fetch Logic & Custom Splash (v1.9.8)** — Implemented a 30-minute news cache in `NewsRepository` to optimize API usage. Added a custom 1.5s Compose-based Splash Screen with a massive **256dp** logo to bypass Android 12+ icon size limits. |
 | 1.9.7   | 2026-04-06 | **Splash Icon Scaling Fix (v1.9.7)** — Bypassed Android 12+ system splash icon limits (108dp) using a transparent icon placeholder. Successfully scaled the centered centered logo to **320dp** via `windowBackground`. |

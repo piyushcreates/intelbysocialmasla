@@ -12,12 +12,13 @@
 ## 2. Core Features
 - **Intel Deck (Intelligence Layer)**: 
     - Real-time "Advertising Technology" news via GNews API.
+    - **Smart Caching**: 30-minute fetch window for maximum data efficiency.
     - Bidirectional swipe gestures and 30s auto-timer engine.
     - Robust "Verified Intel" fallback feed for offline reliability.
 - **Services Portfolio**:
     - Direct booking links for Performance Marketing, AI Automations, and WhatsApp API.
     - Staggered slide-up entry animations for a premium feel.
-- **Identity**: Custom branded icon and Play Store-ready Noir launch screens.
+- **Identity**: Custom branded icon and **Unified BIG Splash** (256dp) launch sequence.
 
 ## 3. Technical Setup
 - **API Setup**: To enable live news, add `GNEWS_API_KEY=your_key` to `local.properties`.
