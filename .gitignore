@@ -27,3 +27,9 @@ cap-manifest.json
 *.tmp
 *.temp
 build_log*.txt
+
+# Signing & Sensitive Assets
+*.jks
+doc/safety.md
+doc/universal_tracking_guide.md
+doc/play_store_deployment_guide.md
