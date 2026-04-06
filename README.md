@@ -21,7 +21,6 @@
 - **Identity**: Custom branded icon and **Unified BIG Splash** (256dp) launch sequence.
 
 ## 3. Technical Setup
-- **API Setup**: To enable live news, add `GNEWS_API_KEY=your_key` to `local.properties`.
 - **Architecture**: MVVM + StateFlow.
 - **UI Framework**: Jetpack Compose.
 - **Networking**: Retrofit 2 + Moshi.
