@@ -39,7 +39,7 @@ android {
                 localProperties.load(localPropertiesFile.inputStream())
             }
             
-            storeFile = localProperties.getProperty("RELEASE_STORE_FILE")?.let { file(it) }
+            storeFile = localProperties.getProperty("RELEASE_STORE_FILE")?.let { rootProject.file(it) }
             storePassword = localProperties.getProperty("RELEASE_STORE_PASSWORD")
             keyAlias = localProperties.getProperty("RELEASE_KEY_ALIAS")
             keyPassword = localProperties.getProperty("RELEASE_KEY_PASSWORD")

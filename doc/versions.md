@@ -1,5 +1,6 @@
 | Version | Date | Changes |
 |---------|------|---------|
+| 2.1.8   | 2026-04-06 | **Gold Release Audit (v2.1.8)** — Final production audit completed. Fixed keystore path resolution in `app/build.gradle.kts`. Updated `local.properties` with 7-key master config. Removed deployment guides from git tracking (cached). Generated final `.aab` bundle. |
 | 2.1.0   | 2026-04-06 | **Play Store Release (v2.1.0)** — Hardened release build type with R8/ProGuard enabled. Incremented `versionCode` to 2 and `versionName` to 1.1.0. Implemented secure `signingConfigs` pulling from `local.properties`. |
 | 2.0.1   | 2026-04-06 | **Final Documentation Polish (v2.0.1)** — Cleaned README.md of setup instructions for a more "Product-First" presentation. |
 | 1.9.9   | 2026-04-06 | **Unified Splash Fix (v1.9.9)** — Removed the "double icon" issue by hiding the small system-generated splash icon. The app now transitions cleanly from a white screen to the authoritative **256dp** Compose Splash Screen. |
