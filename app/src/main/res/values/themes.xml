@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.IntelBySocialMasla" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">#FFFFFF</item>
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <!-- Android 12+ SplashScreen: Hide small system icon to show our BIG Compose splash instead -->
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_transparent</item>
+        <item name="android:windowSplashScreenBackground">#FFFFFF</item>
+    </style>
+</resources>

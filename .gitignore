@@ -1,0 +1,29 @@
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Log/cache files
+*.log
+.DS_Store
+
+# Android Studio / IntelliJ files
+.idea/
+*.iml
+*.iws
+.out/
+
+# Generated files
+cap-manifest.json
+/app/build/
+
+# Signing files
+*.jks
+*.keystore
+
+# Temporary files
+*.tmp
+*.temp
+build_log*.txt
