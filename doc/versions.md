@@ -1,5 +1,6 @@
 | Version | Date | Changes |
 |---------|------|---------|
+| 2.1.9   | 2026-04-07 | **Debug Symbol Patch (v2.1.9)** — Added NDK debug symbols to release build configuration to resolve Play Store Console warnings. |
 | 2.1.8   | 2026-04-06 | **Gold Release Audit (v2.1.8)** — Final production audit completed. Fixed keystore path resolution in `app/build.gradle.kts`. Updated `local.properties` with 7-key master config. Removed deployment guides from git tracking (cached). Generated final `.aab` bundle. |
 | 2.1.0   | 2026-04-06 | **Play Store Release (v2.1.0)** — Hardened release build type with R8/ProGuard enabled. Incremented `versionCode` to 2 and `versionName` to 1.1.0. Implemented secure `signingConfigs` pulling from `local.properties`. |
 | 2.0.1   | 2026-04-06 | **Final Documentation Polish (v2.0.1)** — Cleaned README.md of setup instructions for a more "Product-First" presentation. |
