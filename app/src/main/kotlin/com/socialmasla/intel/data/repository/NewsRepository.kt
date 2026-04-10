@@ -40,9 +40,9 @@ class NewsRepository(
                 NewsItem(
                     id = index.toString(),
                     title = article.title,
-                    summary = article.description,
+                    summary = article.description ?: "",
                     url = article.url,
-                    imageUrl = article.image,
+                    imageUrl = article.image ?: "",
                     publishedAt = article.publishedAt,
                     source = article.source.name
                 )
