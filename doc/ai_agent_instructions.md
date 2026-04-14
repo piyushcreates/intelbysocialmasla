@@ -22,7 +22,14 @@ You are tasked with building and maintaining **Intel by Social Masla** following
 ## 3. SEO & Discovery
 - App metadata must be optimized for "Performance Marketing", "AdTech", and "Digital Advertising" audiences.
 
-## 4. Tracking Logic
-- Baseline Tracking: `app_launch`
-- Intel Tab engagement: `intel_card_swipe`, `intel_read_more`
-- Services Tab engagement: `services_cta_click` (High-Value Conversion)
+## 4. Build System & Environment
+- **Gradle Wrapper**: The project uses a local Gradle wrapper (`./gradlew`). Never use global `gradle` unless for wrapper generation.
+- **Sensitive Data**: All API keys, secrets, and signing credentials MUST live in `local.properties`. 
+- **Git Security**: `local.properties`, `google-services.json`, and `*.jks` files are strictly ignored. Verify `.gitignore` before every major commit.
+
+## 5. Tracking Infrastructure (Standard)
+- **Providers**: Simultaneous logging to **Meta AppEvents** and **Firebase Analytics** via a unified `AnalyticsHelper` singleton.
+- **Optimization**: Use **Standard Events** wherever possible to enable automated ad optimization:
+    - `ViewContent` (Meta) / `view_item` (GA4) with categories: `news_article` or `service_detail`.
+    - `Contact` (Meta) / `generate_lead` (GA4) for high-intent conversions.
+- **Secondary Tracking**: Supplemental tracking via **RudderStack** where applicable.

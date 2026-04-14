@@ -1,5 +1,7 @@
 | Version | Date | Changes |
 |---------|------|---------|
+| 2.4.0   | 2026-04-14 | **Production Release (v2.4.0)** — Standardized tracking events to Meta Standard (ViewContent, Contact) and Firebase (view_item, generate_lead) for automated ad optimization. Restored Gradle wrapper, secured SDK paths locally, and bumped `versionCode` to 5 for Play Store deployment. |
+| 2.3.0   | 2026-04-14 | **Tracking Infrastructure (v2.3.0)** — Integrated Meta Ads SDK and play-services instrumentation. Implemented singleton `AnalyticsHelper` for unified logging to Firebase (Google Ads) and Meta App Events. Secured credentials in `local.properties` via manifest placeholders. |
 | 2.2.0   | 2026-04-09 | **Release Card Fix (v2.2.0)** — Fixed "dummy cards" issue in Play Store builds by implementing ProGuard rules for networking/data models and improving null safety for GNews API responses. Bumped `versionCode` to 4 and `versionName` to 1.1.2. |
 | 2.1.9   | 2026-04-07 | **Debug Symbol Patch (v2.1.9)** — Added NDK debug symbols to release build configuration to resolve Play Store Console warnings. |
 | 2.1.8   | 2026-04-06 | **Gold Release Audit (v2.1.8)** — Final production audit completed. Fixed keystore path resolution in `app/build.gradle.kts`. Updated `local.properties` with 7-key master config. Removed deployment guides from git tracking (cached). Generated final `.aab` bundle. |

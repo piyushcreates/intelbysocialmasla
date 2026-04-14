@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.socialmasla.intel.analytics.RudderStackProvider
+import com.socialmasla.intel.analytics.AnalyticsHelper
 import com.socialmasla.intel.ui.theme.IntelBySocialMaslaTheme
 import com.socialmasla.intel.ui.MainLayout
 
@@ -22,6 +23,9 @@ class MainActivity : ComponentActivity() {
             writeKey = BuildConfig.RUDDER_WRITE_KEY,
             dataPlaneUrl = BuildConfig.RUDDER_DATA_PLANE_URL
         )
+        
+        // Initialize FB and Google Ads tracking
+        AnalyticsHelper.initialize(this)
 
         enableEdgeToEdge()
         setContent {

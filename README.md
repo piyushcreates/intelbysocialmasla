@@ -4,9 +4,8 @@
 
 ## 1. Visual Identity (Noir Design System)
 - **High-Contrast Noir**: Immersive Pure Black (`#000000`) and Pure White (`#FFFFFF`) aesthetic.
-- **Intel Deck**: Black-themed immersive news cards with Emerald-accented progress bars.
-- **Services Hub**: White-themed minimalist portfolio for maximum clarity.
-- **Signature Accent**: Social Masla Emerald Green (`#16a34a`).
+- **Intel Deck**: Pure White background with immersive Black cards.
+- **Services Hub**: Pure White minimalist portfolio for maximum clarity.
 - **Typography**: **Outfit** (Headlines) and **Inter** (Text).
 
 ## 2. Core Features
@@ -24,7 +23,8 @@
 - **Architecture**: MVVM + StateFlow.
 - **UI Framework**: Jetpack Compose.
 - **Networking**: Retrofit 2 + Moshi.
-- **Tracking**: Firebase Analytics + Google Ads SDK linkage for ACe (App Campaign for Engagement) demonstrations.
+- **Tracking**: Dual-SDK integration for **Meta Ads** and **Google Ads (Firebase)**.
+- **Optimization**: Unified `AnalyticsHelper` using **Standard Events** (`ViewContent`, `Contact`, `Lead`) for automated attribution.
 
 ## 4. Performance Marketing Strategy
 In our YouTube tutorials, we use this app to demonstrate:

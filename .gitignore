@@ -33,3 +33,4 @@ build_log*.txt
 doc/safety.md
 doc/universal_tracking_guide.md
 doc/play_store_deployment_guide.md
+app/google-services.json

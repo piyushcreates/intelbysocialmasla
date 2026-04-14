@@ -88,6 +88,9 @@ fun ServiceCard(
             
             Button(
                 onClick = {
+                    // Track service click event for Meta and Firebase
+                    com.socialmasla.intel.analytics.AnalyticsHelper.logServiceClick(serviceItem.title)
+
                     val intent = Intent(Intent.ACTION_VIEW, Uri.parse(serviceItem.url))
                     context.startActivity(intent)
                 },

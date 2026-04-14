@@ -167,16 +167,17 @@ fun NewsCard(
             ) {
                 TextButton(
                     onClick = {
-                        // Track news click event
-                        RudderStackProvider.getAnalytics()?.track(
-                            "read_more_clicked", 
-                            buildJsonObject { 
-                                put("title", newsItem.title)
-                                put("source", newsItem.source)
-                            }
-                        )
-                        
                         if (newsItem.url.isNotBlank()) {
+                            // Track across Meta, Firebase, and RudderStack
+                            com.socialmasla.intel.analytics.AnalyticsHelper.logReadMore(newsItem.url)
+                            
+                            RudderStackProvider.getAnalytics()?.track(
+                                "read_more_clicked", 
+                                buildJsonObject { 
+                                    put("title", newsItem.title)
+                                    put("source", newsItem.source)
+                                }
+                            )
                             uriHandler.openUri(newsItem.url)
                         }
                     }

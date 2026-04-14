@@ -3,6 +3,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -13,8 +14,8 @@ android {
         applicationId = "com.socialmasla.intel"
         minSdk = 24
         targetSdk = 35
-        versionCode = 4
-        versionName = "1.1.2"
+        versionCode = 5
+        versionName = "1.2.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -29,6 +30,9 @@ android {
         buildConfigField("String", "GNEWS_API_KEY", "\"${localProperties.getProperty("GNEWS_API_KEY") ?: ""}\"")
         buildConfigField("String", "RUDDER_WRITE_KEY", "\"${localProperties.getProperty("RUDDER_WRITE_KEY") ?: ""}\"")
         buildConfigField("String", "RUDDER_DATA_PLANE_URL", "\"${localProperties.getProperty("RUDDER_DATA_PLANE_URL") ?: ""}\"")
+
+        manifestPlaceholders["FACEBOOK_APP_ID"] = localProperties.getProperty("FACEBOOK_APP_ID") ?: ""
+        manifestPlaceholders["FACEBOOK_CLIENT_TOKEN"] = localProperties.getProperty("FACEBOOK_CLIENT_TOKEN") ?: ""
     }
 
     signingConfigs {
@@ -106,11 +110,15 @@ dependencies {
 
     // Firebase
     implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
-    implementation("com.google.firebase:firebase-analytics-ktx")
+    implementation("com.google.firebase:firebase-analytics")
 
     // RudderStack Universal Tracking (Kotlin)
     implementation("com.rudderstack.sdk.kotlin:android:1.3.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+
+    // Meta Ads & Attribution
+    implementation("com.facebook.android:facebook-core:latest.release")
+    implementation("com.android.installreferrer:installreferrer:2.2")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")

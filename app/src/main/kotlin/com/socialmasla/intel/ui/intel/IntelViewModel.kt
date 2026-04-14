@@ -16,9 +16,7 @@ import com.socialmasla.intel.data.remote.NewsApiService
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
-class IntelViewModel(
-    private val analyticsHelper: AnalyticsHelper? = null
-) : ViewModel() {
+class IntelViewModel : ViewModel() {
 
     private val repository: NewsRepository by lazy {
         val moshi = com.squareup.moshi.Moshi.Builder()
@@ -153,7 +151,7 @@ class IntelViewModel(
         if (_newsItems.value.isEmpty()) return
         
         val currentTitle = _newsItems.value.getOrNull(_currentIndex.value)?.title
-        currentTitle?.let { analyticsHelper?.logIntelSwipe(it) }
+        currentTitle?.let { AnalyticsHelper.logIntelSwipe(it) }
 
         _isSwipingForward.value = true
         _progress.value = 0f

@@ -99,6 +99,9 @@ fun ServicesScreen() {
 
                 Button(
                     onClick = {
+                        // Track conversion event for Meta and Firebase
+                        com.socialmasla.intel.analytics.AnalyticsHelper.logServiceClick("explore_services_main")
+
                         // Track conversion event using Kotlin SDK syntax via provider
                         RudderStackProvider.getAnalytics()?.track(
                             "learn_more_clicked", 
